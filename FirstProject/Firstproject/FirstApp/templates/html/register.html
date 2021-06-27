@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Form</title>
+</head>
+<body>
+<form action="{% url 'registrationform' %}" method="post">
+	{% csrf_token %}
+	<input type="text" name="Firstname" placeholder="Enter First Name"><br>
+	<input type="text" name="Lastname" placeholder="Enter Last Name"><br>
+	<input type="email" name="email" placeholder="Enter Email Id"><br>
+	<label>Enter your mobile number</label><br>
+	<input type="text" name="Phonenumber" placeholder="Enter Phone number"><br>
+	<h3>Gender</h3>
+	<input type="radio" name="gender" value="male">
+	<label for="male">male</label><br>
+	<input type="radio" name="gender" value="female">
+	<label for="male">female</label><br>
+	<input type="text" name="address" placeholder="Enter your address"><br>
+	<label>Select the languages you know</label><br>
+	<label>Python</label>
+	<input type="checkbox" name="language" value="Python"><br>
+	<label>C++</label>
+	<input type="checkbox" name="language" value="C++"><br>
+	<label>Java</label>
+	<input type="checkbox" name="language" value="Java"><br>
+	<input type="submit" name="submit" value="Submit">
+</form>
+</body>
+</html>
